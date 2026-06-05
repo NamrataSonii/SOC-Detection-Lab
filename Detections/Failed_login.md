@@ -126,8 +126,6 @@ against the account `testuser` on the machine `NAMRATA`.
 | 0xC0000234 | Account locked out |
 
 ## Investigation Evidence
-<p align="center">
-  <img src="../Screenshots/Failed_login_1.png" width="800">
-</p>
+<img src="../Screenshots/Failed_login_1.png" width="600">
 ![Failed Login](../Screenshots/Failed_login_2.png)
 ![No_of_Failed Login](../Screenshots/Failed_login_3.png)
