@@ -70,18 +70,6 @@ against the account `testuser` on the machine `NAMRATA`.
 | Source Address | ::1 (localhost / internal) |
 | Authentication Package | Negotiate |
 | Total Failed Attempts | 13 |
-
-### Log Evidence
-
-#### Event Detail — EventCode 4625
-![Failed Login Event Detail](../../screenshots/failed-login-1.png)
-
-#### Network & Failure Information
-![Failure and Network Info](../../screenshots/failed-login-2.png)
-
-#### Failed Attempt Count (testuser = 13 attempts)
-![Testuser Failed Count](../../screenshots/failed-login-3.png)
-
 ---
 
 ## Key Findings
@@ -138,6 +126,6 @@ against the account `testuser` on the machine `NAMRATA`.
 | 0xC0000234 | Account locked out |
 
 ## Investigation Evidence
-![Failed Login](../Screenshots/Failed_login_1.png)
+![Failed Login_logs](../Screenshots/Failed_login_1.png)
 ![Failed Login](../Screenshots/Failed_login_2.png)
 ![No_of_Failed Login](../Screenshots/Failed_login_3.png)
