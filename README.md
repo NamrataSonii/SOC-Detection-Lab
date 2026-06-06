@@ -23,6 +23,8 @@ and Sysmon.
 +--------------------------------------------------+
 ```
 
+---
+
 ## Tools & Technologies
 
 | Component | Role |
@@ -32,6 +34,37 @@ and Sysmon.
 | Sysmon (System Monitor) | Deep Windows process and network telemetry |
 | Windows Security Event Log | Authentication, account, and audit events |
 | MITRE ATT&CK Framework | Threat mapping and detection categorization |
+
+---
+
+## Repository Structure
+
+```
+SOC-Detection-Lab/
+├── Detections/
+│   ├── README.md
+│   ├── Failed_login.md
+│   ├── Successful_login.md
+│   ├── Powershell_Execution.md
+│   ├── User_Creation.md
+│   └── Local_Group_Member_Modification.md
+├── Playbooks/
+│   ├── README.md
+│   ├── Failed-Login-Playbook.md
+│   ├── Successful-Login-Playbook.md
+│   ├── Powershell-Execution-Playbook.md
+│   ├── User-Creation-Playbook.md
+│   └── Local-Group-Modification-Playbook.md
+├── Setup/
+│   ├── README.md
+│   ├── Splunk-Enterprise-Setup.md
+│   ├── Splunk-Universal-Forwarder-Setup.md
+│   ├── Sysmon-Setup.md
+│   └── Forwarder-to-Splunk-Config.md
+├── Screenshots/
+├── MITRE-Mapping.md
+└── README.md
+```
 
 ---
 
@@ -54,22 +87,6 @@ a single Windows host. All 5 detections are connected and tell one continuous st
 ```
 
 Account Creation -> Credential Testing -> Persistence -> Privilege Escalation
-
----
-
-## Repository Structure
-
-```
-SOC-Detection-Lab/
-├── Detections/
-│   ├── Failed_login.md
-│   ├── Successful_login.md
-│   ├── Powershell_Execution.md
-│   ├── User_Creation.md
-│   └── Local_Group_Member_Modification.md
-├── Screenshots/
-└── README.md
-```
 
 ---
 
@@ -117,6 +134,46 @@ source="WinEventLog:Security" EventCode IN (4720, 4625, 4624, 4732)
 
 ---
 
+## Incident Response Playbooks
+
+Each detection in this lab has a matching playbook that documents how a SOC analyst
+should triage, investigate, and respond to the alert.
+
+| Playbook | Severity | MITRE Technique |
+|----------|----------|-----------------|
+| [Failed Login Playbook](./Playbooks/Failed-Login-Playbook.md) | High | T1110 - Brute Force |
+| [Successful Login Playbook](./Playbooks/Successful-Login-Playbook.md) | Medium | T1078 - Valid Accounts |
+| [PowerShell Execution Playbook](./Playbooks/Powershell-Execution-Playbook.md) | High | T1059.001 - PowerShell |
+| [User Creation Playbook](./Playbooks/User-Creation-Playbook.md) | High | T1136.001 - Create Local Account |
+| [Local Group Modification Playbook](./Playbooks/Local-Group-Modification-Playbook.md) | High | T1098 - Account Manipulation |
+
+---
+
+## MITRE ATT&CK Coverage
+
+| Tactic | Technique | Technique ID |
+|--------|-----------|--------------|
+| Credential Access | Brute Force | T1110 |
+| Defense Evasion | Valid Accounts | T1078 |
+| Execution | PowerShell | T1059.001 |
+| Persistence | Create Local Account | T1136.001 |
+| Persistence | Account Manipulation | T1098 |
+
+Full mapping available in [MITRE-Mapping.md](./MITRE-Mapping.md)
+
+---
+
+## Setup
+
+Full setup instructions are available in the [Setup](./Setup/) folder covering:
+
+- Splunk Enterprise installation and configuration
+- Splunk Universal Forwarder installation
+- Sysmon installation with detection config
+- Connecting the Forwarder to Splunk
+
+---
+
 ## What I Learned
 
 - Configuring Splunk Enterprise and Universal Forwarder for Windows log ingestion
@@ -125,6 +182,13 @@ source="WinEventLog:Security" EventCode IN (4720, 4625, 4624, 4732)
 - Mapping detections to the MITRE ATT&CK framework
 - Investigating a complete multi-stage attack chain end-to-end
 - Correlating events across multiple Event IDs to reconstruct attacker behavior
+- Writing incident response playbooks for each detection
+
+---
+
+## Screenshots
+
+Evidence screenshots from detections firing in Splunk are available in the [Screenshots](./Screenshots/) folder.
 
 ---
 
@@ -137,8 +201,3 @@ source="WinEventLog:Security" EventCode IN (4720, 4625, 4624, 4732)
 - [Florian Roth Sysmon Config](https://github.com/Neo23x0/sysmon-config)
 
 ---
-
-## Author
-
-**Namrata Soni**
-[GitHub](https://github.com/NamrataSonii)
