@@ -56,7 +56,6 @@ Before starting, make sure you have:
 | `Sysmon-Setup.md` | Install Sysmon with config for detailed logging |
 | `Forwarder-to-Splunk-Config.md` | Connect Forwarder to Splunk (inputs.conf & outputs.conf) |
 
-
 ---
 
 ## Setup Order
