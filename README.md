@@ -1,11 +1,5 @@
 # SOC Detection Lab
 
-![Splunk](https://img.shields.io/badge/Splunk-Enterprise-black?style=flat&logo=splunk&logoColor=white)
-![Sysmon](https://img.shields.io/badge/Sysmon-Enabled-blue?style=flat)
-![Windows](https://img.shields.io/badge/Windows-Security%20Logs-0078D6?style=flat&logo=windows)
-![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=flat)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
-
 A hands-on Security Operations Center (SOC) home lab built to simulate real-world
 attacks, capture Windows security events, and analyze them using Splunk Enterprise
 and Sysmon.
