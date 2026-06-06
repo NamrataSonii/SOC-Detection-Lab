@@ -47,7 +47,7 @@ Before starting, make sure you have:
 
 ---
 
-##  Files in This Folder
+## Files in This Folder
 
 | File | Description |
 |------|-------------|
@@ -74,7 +74,7 @@ Step 5 → Verify logs in Splunk
 
 ## Step 1 — Install Splunk Enterprise
 
-> Full guide: [`Splunk-Enterprise-Setup.md`](./01-Splunk-Enterprise-Setup.md)
+> Full guide: [`Splunk-Enterprise-Setup.md`](./Splunk-Enterprise-Setup.md)
 
 **Quick Summary:**
 1. Download and run the Splunk Enterprise installer
@@ -87,7 +87,7 @@ Step 5 → Verify logs in Splunk
 
 ## Step 2 — Install Splunk Universal Forwarder
 
-> Full guide: [`Splunk-Universal-Forwarder-Setup.md`](./02-Splunk-Universal-Forwarder-Setup.md)
+> Full guide: [`Splunk-Universal-Forwarder-Setup.md`](./Splunk-Universal-Forwarder-Setup.md)
 
 **Quick Summary:**
 1. Download and run the Universal Forwarder MSI on your Windows machine
@@ -98,7 +98,7 @@ Step 5 → Verify logs in Splunk
 
 ## Step 3 — Install Sysmon
 
-> Full guide: [`Sysmon-Setup.md`](./03-Sysmon-Setup.md)
+> Full guide: [`Sysmon-Setup.md`](./Sysmon-Setup.md)
 
 **Quick Summary:**
 1. Download `Sysmon64.exe` from Microsoft Sysinternals
@@ -113,7 +113,7 @@ sysmon64.exe -accepteula -i Configs\sysmon-config.xml
 
 ## Step 4 — Configure Forwarder → Splunk
 
-> Full guide: [`Forwarder-to-Splunk-Config.md`](./04-Forwarder-to-Splunk-Config.md)
+> Full guide: [`Forwarder-to-Splunk-Config.md`](./Forwarder-to-Splunk-Config.md)
 
 **Quick Summary:**
 1. Create `inputs.conf` to collect Security, System, and Sysmon logs
@@ -172,5 +172,6 @@ You should see these sourcetypes:
 
 - If running on a single machine, use `127.0.0.1` as the Splunk IP in `outputs.conf`
 - If running on separate VMs, both must be on the same virtual network
+- Sysmon config is based on [Olaf Hartong's sysmon-modular](https://github.com/olafhartong/sysmon-modular)
 
 ---
