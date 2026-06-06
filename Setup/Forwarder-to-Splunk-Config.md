@@ -133,10 +133,3 @@ You should see:
 | Wrong IP | Verify outputs.conf has correct Splunk IP |
 | Port blocked | Allow port 9997 in Windows Firewall |
 | Index missing | Create `endpoint` index in Splunk Settings |
-
-### Check Forwarder is Running:
-```powershell
-Get-Service SplunkForwarder
-```
-
-### Check Forwarder Logs for Errors:
