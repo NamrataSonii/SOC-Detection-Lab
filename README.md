@@ -141,11 +141,11 @@ should triage, investigate, and respond to the alert.
 
 | Playbook | Severity | MITRE Technique |
 |----------|----------|-----------------|
-| [Failed Login Playbook](./Playbooks/Failed-Login-Playbook.md) | High | T1110 - Brute Force |
-| [Successful Login Playbook](./Playbooks/Successful-Login-Playbook.md) | Medium | T1078 - Valid Accounts |
-| [PowerShell Execution Playbook](./Playbooks/Powershell-Execution-Playbook.md) | High | T1059.001 - PowerShell |
-| [User Creation Playbook](./Playbooks/User-Creation-Playbook.md) | High | T1136.001 - Create Local Account |
-| [Local Group Modification Playbook](./Playbooks/Local-Group-Modification-Playbook.md) | High | T1098 - Account Manipulation |
+| [Failed Login Playbook](./Playbook/Failed-Login-Playbook.md) | High | T1110 - Brute Force |
+| [Successful Login Playbook](./Playbook/Successful-Login-Playbook.md) | Medium | T1078 - Valid Accounts |
+| [PowerShell Execution Playbook](./Playbook/Powershell-Execution-Playbook.md) | High | T1059.001 - PowerShell |
+| [User Creation Playbook](./Playbook/User-Creation-Playbook.md) | High | T1136.001 - Create Local Account |
+| [Local Group Modification Playbook](./Playbook/Local-Group-Modification-Playbook.md) | High | T1098 - Account Manipulation |
 
 ---
 
